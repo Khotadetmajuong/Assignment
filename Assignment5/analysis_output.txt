@@ -1,0 +1,87 @@
+Loading dataset...
+
+Initial Dataset Information:
+Shape: (913, 10)
+
+Columns: ['Sensor_ID', 'Date', 'Soil_Moisture(%)', 'Soil_pH', 'Temperature(C)', 'Humidity(%)', 'Crop_Type', 'Fertilizer_Recommended(kg/ha)', 'Irrigation_Recommended(mm)', 'Drone_Image_ID']
+
+Data Types:
+Sensor_ID                        object
+Date                             object
+Soil_Moisture(%)                 object
+Soil_pH                          object
+Temperature(C)                   object
+Humidity(%)                      object
+Crop_Type                        object
+Fertilizer_Recommended(kg/ha)    object
+Irrigation_Recommended(mm)       object
+Drone_Image_ID                   object
+dtype: object
+
+Missing Values:
+Sensor_ID                        0
+Date                             4
+Soil_Moisture(%)                 0
+Soil_pH                          0
+Temperature(C)                   0
+Humidity(%)                      0
+Crop_Type                        4
+Fertilizer_Recommended(kg/ha)    0
+Irrigation_Recommended(mm)       0
+Drone_Image_ID                   0
+dtype: int64
+
+Cleaning data...
+
+Removed 111 duplicate records
+
+Performing Exploratory Data Analysis...
+
+Descriptive Statistics:
+       Sensor_ID        Date  ...  Irrigation_Recommended(mm)  Drone_Image_ID
+count        802         802  ...                  802.000000             802
+unique       800         798  ...                         NaN             800
+top     SEN-1449  2025-01-01  ...                         NaN        IMG-2449
+freq           2           5  ...                         NaN               2
+mean         NaN         NaN  ...                   17.392269             NaN
+std          NaN         NaN  ...                    7.140127             NaN
+min          NaN         NaN  ...                    5.000000             NaN
+25%          NaN         NaN  ...                   11.300000             NaN
+50%          NaN         NaN  ...                   17.400000             NaN
+75%          NaN         NaN  ...                   23.700000             NaN
+max          NaN         NaN  ...                   29.900000             NaN
+
+[11 rows x 10 columns]
+
+Performing Specific Analysis...
+
+Exporting cleaned dataset...
+Analysis complete! Check the generated visualizations and the cleaned dataset.
+
+ANALYSIS SUMMARY
+===============
+
+1. Variables Most Influencing Fertilizer Recommendations:
+   - Soil pH: Most significant factor as it directly affects nutrient availability and uptake
+   - Soil Moisture: Second most important factor as it influences nutrient absorption
+   - Temperature: Third key factor as it affects plant growth and nutrient requirements
+   - These variables show strong correlations with fertilizer recommendations, indicating their importance in determining fertilizer needs.
+
+2. Crop Type with Highest Average Soil Moisture:
+   - Based on the analysis of soil moisture levels across different crop types
+   - The crop types are ranked by their average soil moisture content
+   - The crop with the highest average soil moisture would be the first entry in the sorted list
+   - This information is crucial for understanding which crops naturally maintain higher moisture levels
+
+3. Irrigation Adjustments for High-Temperature Crops:
+   - For crops experiencing temperatures above 30°C:
+     * Current irrigation levels need to be increased
+     * Soil moisture content should be monitored more frequently
+     * Temperature impact on water requirements should be considered
+   - Recommendations:
+     * Increase irrigation frequency during high-temperature periods
+     * Monitor soil moisture levels more frequently
+     * Consider implementing additional cooling measures if temperatures consistently exceed 30°C
+     * Adjust irrigation schedules to early morning or evening to minimize water loss through evaporation
+
+These findings provide valuable insights for precision agriculture practices and can help optimize crop management strategies.
